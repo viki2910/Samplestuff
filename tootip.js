@@ -61,7 +61,11 @@ class Tooltip extends HTMLElement {
   connectedCallback() {
     const btn = this.shadowRoot.querySelector(".tooltip-btn");
     const tootipElement = this.shadowRoot.querySelector(".tooltip-msg");
-    btn.addEventListener("click", () => {
+    this.getRootNode().addEventListener("click", () => {
+      tootipElement.style.transform = "scale(0)";
+    });
+    btn.addEventListener("click", (e) => {
+      e.stopImmediatePropagation();
       tootipElement.style.transform = "scale(1)";
     });
   }
