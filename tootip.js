@@ -26,9 +26,9 @@ template.innerHTML = `
 
       .tooltip-msg{
         font-size:15px;
-        color:black;
+        color:white;
         line-height:1.4;
-        background: white;
+        background: #34b349;
         padding: 10px;
         border-radius: 5px;
         z-index: 9;
